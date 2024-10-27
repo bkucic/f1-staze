@@ -1,0 +1,488 @@
+[
+    {
+        "staza_id": 1,
+        "staza_naziv": "Albert Park Circuit",
+        "geografska_sirina": -37.849724,
+        "geografska_duzina": 144.96834,
+        "podrucje": "Melbourne",
+        "drzava": "Australija",
+        "tip": "ulična",
+        "duljina_km": 5.278,
+        "broj_zavoja": 16,
+        "smjer": "u smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 1,
+                "vn_naziv": "Australian Grand Prix",
+                "broj_odrzavanja": 87
+            }
+        ]
+    },
+    {
+        "staza_id": 2,
+        "staza_naziv": "Autódromo Hermanos Rodríguez",
+        "geografska_sirina": 19.40611,
+        "geografska_duzina": -99.0925,
+        "podrucje": "Ciudad de México",
+        "drzava": "Meksiko",
+        "tip": "stalna",
+        "duljina_km": 4.304,
+        "broj_zavoja": 17,
+        "smjer": "u smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 2,
+                "vn_naziv": "Mexican Grand Prix",
+                "broj_odrzavanja": 24
+            }
+        ]
+    },
+    {
+        "staza_id": 3,
+        "staza_naziv": "Autodromo Internazionale Enzo e Dino Ferrari",
+        "geografska_sirina": 44.34111,
+        "geografska_duzina": 11.713333,
+        "podrucje": "Imola",
+        "drzava": "Italija",
+        "tip": "stalna",
+        "duljina_km": 4.909,
+        "broj_zavoja": 17,
+        "smjer": "suprotno smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 3,
+                "vn_naziv": "Italian Grand Prix",
+                "broj_odrzavanja": 94
+            },
+            {
+                "vn_id": 29,
+                "vn_naziv": "Emilia Romagna Grand Prix",
+                "broj_odrzavanja": 4
+            },
+            {
+                "vn_id": 30,
+                "vn_naziv": "San Marino Grand Prix",
+                "broj_odrzavanja": 26
+            }
+        ]
+    },
+    {
+        "staza_id": 4,
+        "staza_naziv": "Autodromo José Carlos Pace",
+        "geografska_sirina": -23.70111,
+        "geografska_duzina": -46.697224,
+        "podrucje": "São Paulo",
+        "drzava": "Brazil",
+        "tip": "stalna",
+        "duljina_km": 4.309,
+        "broj_zavoja": 15,
+        "smjer": "suprotno smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 4,
+                "vn_naziv": "Brazilian Grand Prix",
+                "broj_odrzavanja": 51
+            }
+        ]
+    },
+    {
+        "staza_id": 5,
+        "staza_naziv": "Autodromo Nazionale di Monza",
+        "geografska_sirina": 45.620556,
+        "geografska_duzina": 9.289444,
+        "podrucje": "Monza",
+        "drzava": "Italija",
+        "tip": "stalna",
+        "duljina_km": 5.793,
+        "broj_zavoja": 11,
+        "smjer": "u smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 3,
+                "vn_naziv": "Italian Grand Prix",
+                "broj_odrzavanja": 94
+            }
+        ]
+    },
+    {
+        "staza_id": 6,
+        "staza_naziv": "Bahrain International Circuit",
+        "geografska_sirina": 26.0325,
+        "geografska_duzina": 50.510555,
+        "podrucje": "Sakhir",
+        "drzava": "Bahrein",
+        "tip": "stalna",
+        "duljina_km": 5.412,
+        "broj_zavoja": 15,
+        "smjer": "u smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 5,
+                "vn_naziv": "Bahrain Grand Prix",
+                "broj_odrzavanja": 20
+            },
+            {
+                "vn_id": 27,
+                "vn_naziv": "Sakhir Grand Prix",
+                "broj_odrzavanja": 1
+            }
+        ]
+    },
+    {
+        "staza_id": 7,
+        "staza_naziv": "Baku City Circuit",
+        "geografska_sirina": 40.3725,
+        "geografska_duzina": 49.853333,
+        "podrucje": "Baku",
+        "drzava": "Azerbajdžan",
+        "tip": "ulična",
+        "duljina_km": 6.003,
+        "broj_zavoja": 20,
+        "smjer": "suprotno smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 6,
+                "vn_naziv": "Azerbaijan Grand Prix",
+                "broj_odrzavanja": 7
+            },
+            {
+                "vn_id": 26,
+                "vn_naziv": "European Grand Prix",
+                "broj_odrzavanja": 23
+            }
+        ]
+    },
+    {
+        "staza_id": 8,
+        "staza_naziv": "Circuit de Barcelona-Catalunya",
+        "geografska_sirina": 41.57,
+        "geografska_duzina": 2.261111,
+        "podrucje": "Montmeló",
+        "drzava": "Španjolska",
+        "tip": "stalna",
+        "duljina_km": 4.657,
+        "broj_zavoja": 14,
+        "smjer": "u smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 7,
+                "vn_naziv": "Spanish Grand Prix",
+                "broj_odrzavanja": 65
+            }
+        ]
+    },
+    {
+        "staza_id": 9,
+        "staza_naziv": "Circuit de Monaco",
+        "geografska_sirina": 43.734722,
+        "geografska_duzina": 7.420556,
+        "podrucje": "Monte Carlo",
+        "drzava": "Monako",
+        "tip": "ulična",
+        "duljina_km": 3.337,
+        "broj_zavoja": 19,
+        "smjer": "u smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 8,
+                "vn_naziv": "Monaco Grand Prix",
+                "broj_odrzavanja": 81
+            }
+        ]
+    },
+    {
+        "staza_id": 10,
+        "staza_naziv": "Circuit de Spa-Francorchamps",
+        "geografska_sirina": 50.43722,
+        "geografska_duzina": 5.971389,
+        "podrucje": "Stavelot",
+        "drzava": "Belgija",
+        "tip": "stalna",
+        "duljina_km": 7.004,
+        "broj_zavoja": 20,
+        "smjer": "u smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 9,
+                "vn_naziv": "Belgian Grand Prix",
+                "broj_odrzavanja": 80
+            }
+        ]
+    },
+    {
+        "staza_id": 11,
+        "staza_naziv": "Circuit Gilles-Villeneuve",
+        "geografska_sirina": 45.500557,
+        "geografska_duzina": -73.5225,
+        "podrucje": "Montreal",
+        "drzava": "Kanada",
+        "tip": "ulična",
+        "duljina_km": 4.361,
+        "broj_zavoja": 13,
+        "smjer": "u smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 10,
+                "vn_naziv": "Canadian Grand Prix",
+                "broj_odrzavanja": 59
+            }
+        ]
+    },
+    {
+        "staza_id": 12,
+        "staza_naziv": "Circuit of the Americas",
+        "geografska_sirina": 30.132778,
+        "geografska_duzina": -97.64111,
+        "podrucje": "Austin",
+        "drzava": "SAD",
+        "tip": "stalna",
+        "duljina_km": 5.513,
+        "broj_zavoja": 20,
+        "smjer": "suprotno smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 11,
+                "vn_naziv": "United States Grand Prix",
+                "broj_odrzavanja": 53
+            }
+        ]
+    },
+    {
+        "staza_id": 13,
+        "staza_naziv": "Circuit Zandvoort",
+        "geografska_sirina": 52.38889,
+        "geografska_duzina": 4.540833,
+        "podrucje": "Zandvoort",
+        "drzava": "Nizozemska",
+        "tip": "stalna",
+        "duljina_km": 4.259,
+        "broj_zavoja": 14,
+        "smjer": "u smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 12,
+                "vn_naziv": "Dutch Grand Prix",
+                "broj_odrzavanja": 36
+            }
+        ]
+    },
+    {
+        "staza_id": 14,
+        "staza_naziv": "Hungaroring",
+        "geografska_sirina": 47.582222,
+        "geografska_duzina": 19.25111,
+        "podrucje": "Mogyoród",
+        "drzava": "Mađarska",
+        "tip": "stalna",
+        "duljina_km": 4.381,
+        "broj_zavoja": 14,
+        "smjer": "u smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 13,
+                "vn_naziv": "Hungarian Grand Prix",
+                "broj_odrzavanja": 40
+            }
+        ]
+    },
+    {
+        "staza_id": 15,
+        "staza_naziv": "Jeddah Corniche Circuit",
+        "geografska_sirina": 21.631945,
+        "geografska_duzina": 39.104443,
+        "podrucje": "Jeddah",
+        "drzava": "Saudijska Arabija",
+        "tip": "ulična",
+        "duljina_km": 6.174,
+        "broj_zavoja": 27,
+        "smjer": "suprotno smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 14,
+                "vn_naziv": "Saudi Arabian Grand Prix",
+                "broj_odrzavanja": 4
+            }
+        ]
+    },
+    {
+        "staza_id": 16,
+        "staza_naziv": "Las Vegas Strip Circuit",
+        "geografska_sirina": 36.10995,
+        "geografska_duzina": -115.16217,
+        "podrucje": "Paradise",
+        "drzava": "SAD",
+        "tip": "ulična",
+        "duljina_km": 6.201,
+        "broj_zavoja": 17,
+        "smjer": "suprotno smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 15,
+                "vn_naziv": "Las Vegas Grand Prix",
+                "broj_odrzavanja": 1
+            }
+        ]
+    },
+    {
+        "staza_id": 17,
+        "staza_naziv": "Lusail International Circuit",
+        "geografska_sirina": 25.49,
+        "geografska_duzina": 51.454166,
+        "podrucje": "Lusail",
+        "drzava": "Katar",
+        "tip": "stalna",
+        "duljina_km": 5.419,
+        "broj_zavoja": 16,
+        "smjer": "u smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 16,
+                "vn_naziv": "Qatar Grand Prix",
+                "broj_odrzavanja": 2
+            }
+        ]
+    },
+    {
+        "staza_id": 18,
+        "staza_naziv": "Marina Bay Street Circuit",
+        "geografska_sirina": 1.291531,
+        "geografska_duzina": 103.86385,
+        "podrucje": "Marina Bay",
+        "drzava": "Singapur",
+        "tip": "ulična",
+        "duljina_km": 4.94,
+        "broj_zavoja": 19,
+        "smjer": "suprotno smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 17,
+                "vn_naziv": "Singapore Grand Prix",
+                "broj_odrzavanja": 23
+            }
+        ]
+    },
+    {
+        "staza_id": 19,
+        "staza_naziv": "Miami International Autodrome",
+        "geografska_sirina": 25.958055,
+        "geografska_duzina": -80.23889,
+        "podrucje": "Miami Gardens",
+        "drzava": "SAD",
+        "tip": "ulična",
+        "duljina_km": 5.412,
+        "broj_zavoja": 18,
+        "smjer": "suprotno smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 18,
+                "vn_naziv": "Miami Grand Prix",
+                "broj_odrzavanja": 3
+            }
+        ]
+    },
+    {
+        "staza_id": 20,
+        "staza_naziv": "Red Bull Ring",
+        "geografska_sirina": 47.219723,
+        "geografska_duzina": 14.764722,
+        "podrucje": "Spielberg",
+        "drzava": "Austrija",
+        "tip": "stalna",
+        "duljina_km": 4.318,
+        "broj_zavoja": 10,
+        "smjer": "u smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 19,
+                "vn_naziv": "Austrian Grand Prix",
+                "broj_odrzavanja": 43
+            },
+            {
+                "vn_id": 25,
+                "vn_naziv": "Styrian Grand Prix",
+                "broj_odrzavanja": 2
+            }
+        ]
+    },
+    {
+        "staza_id": 21,
+        "staza_naziv": "Shanghai International Circuit",
+        "geografska_sirina": 31.338888,
+        "geografska_duzina": 121.21972,
+        "podrucje": "Shanghai",
+        "drzava": "Kina",
+        "tip": "stalna",
+        "duljina_km": 5.451,
+        "broj_zavoja": 16,
+        "smjer": "u smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 20,
+                "vn_naziv": "Chinese Grand Prix",
+                "broj_odrzavanja": 17
+            }
+        ]
+    },
+    {
+        "staza_id": 22,
+        "staza_naziv": "Silverstone Circuit",
+        "geografska_sirina": 52.071,
+        "geografska_duzina": -1.016,
+        "podrucje": "Silverstone",
+        "drzava": "Ujedinjeno Kraljevstvo",
+        "tip": "stalna",
+        "duljina_km": 5.891,
+        "broj_zavoja": 18,
+        "smjer": "u smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 21,
+                "vn_naziv": "British Grand Prix",
+                "broj_odrzavanja": 79
+            },
+            {
+                "vn_id": 24,
+                "vn_naziv": "70th Anniversary Grand Prix",
+                "broj_odrzavanja": 1
+            }
+        ]
+    },
+    {
+        "staza_id": 23,
+        "staza_naziv": "Suzuka International Racing Course",
+        "geografska_sirina": 34.8417,
+        "geografska_duzina": 136.5389,
+        "podrucje": "Suzuka",
+        "drzava": "Japan",
+        "tip": "stalna",
+        "duljina_km": 5.807,
+        "broj_zavoja": 18,
+        "smjer": "dvosmjerna",
+        "velike_nagrade": [
+            {
+                "vn_id": 22,
+                "vn_naziv": "Japanese Grand Prix",
+                "broj_odrzavanja": 49
+            }
+        ]
+    },
+    {
+        "staza_id": 24,
+        "staza_naziv": "Yas Marina Circuit",
+        "geografska_sirina": 24.467222,
+        "geografska_duzina": 54.603058,
+        "podrucje": "Abu Dhabi",
+        "drzava": "UAE",
+        "tip": "stalna",
+        "duljina_km": 5.281,
+        "broj_zavoja": 15,
+        "smjer": "suprotno smjeru kazaljke na satu",
+        "velike_nagrade": [
+            {
+                "vn_id": 23,
+                "vn_naziv": "Abu Dhabi Grand Prix",
+                "broj_odrzavanja": 15
+            }
+        ]
+    }
+]

@@ -1,0 +1,31 @@
+staza_id,staza_naziv,geografska_sirina,geografska_duzina,podrucje,drzava,tip,duljina_km,broj_zavoja,smjer,vn_id,vn_naziv,broj_odrzavanja
+1,Albert Park Circuit,-37.849724,144.96834,Melbourne,Australija,ulična,5.278,16,u smjeru kazaljke na satu,1,Australian Grand Prix,87
+2,Autódromo Hermanos Rodríguez,19.40611,-99.0925,Ciudad de México,Meksiko,stalna,4.304,17,u smjeru kazaljke na satu,2,Mexican Grand Prix,24
+3,Autodromo Internazionale Enzo e Dino Ferrari,44.34111,11.713333,Imola,Italija,stalna,4.909,17,suprotno smjeru kazaljke na satu,29,Emilia Romagna Grand Prix,4
+3,Autodromo Internazionale Enzo e Dino Ferrari,44.34111,11.713333,Imola,Italija,stalna,4.909,17,suprotno smjeru kazaljke na satu,3,Italian Grand Prix,94
+3,Autodromo Internazionale Enzo e Dino Ferrari,44.34111,11.713333,Imola,Italija,stalna,4.909,17,suprotno smjeru kazaljke na satu,30,San Marino Grand Prix,26
+4,Autodromo José Carlos Pace,-23.70111,-46.697224,São Paulo,Brazil,stalna,4.309,15,suprotno smjeru kazaljke na satu,4,Brazilian Grand Prix,51
+5,Autodromo Nazionale di Monza,45.620556,9.289444,Monza,Italija,stalna,5.793,11,u smjeru kazaljke na satu,3,Italian Grand Prix,94
+6,Bahrain International Circuit,26.0325,50.510555,Sakhir,Bahrein,stalna,5.412,15,u smjeru kazaljke na satu,5,Bahrain Grand Prix,20
+6,Bahrain International Circuit,26.0325,50.510555,Sakhir,Bahrein,stalna,5.412,15,u smjeru kazaljke na satu,27,Sakhir Grand Prix,1
+7,Baku City Circuit,40.3725,49.853333,Baku,Azerbajdžan,ulična,6.003,20,suprotno smjeru kazaljke na satu,6,Azerbaijan Grand Prix,7
+7,Baku City Circuit,40.3725,49.853333,Baku,Azerbajdžan,ulična,6.003,20,suprotno smjeru kazaljke na satu,26,European Grand Prix,23
+8,Circuit de Barcelona-Catalunya,41.57,2.261111,Montmeló,Španjolska,stalna,4.657,14,u smjeru kazaljke na satu,7,Spanish Grand Prix,65
+9,Circuit de Monaco,43.734722,7.420556,Monte Carlo,Monako,ulična,3.337,19,u smjeru kazaljke na satu,8,Monaco Grand Prix,81
+10,Circuit de Spa-Francorchamps,50.43722,5.971389,Stavelot,Belgija,stalna,7.004,20,u smjeru kazaljke na satu,9,Belgian Grand Prix,80
+11,Circuit Gilles-Villeneuve,45.500557,-73.5225,Montreal,Kanada,ulična,4.361,13,u smjeru kazaljke na satu,10,Canadian Grand Prix,59
+12,Circuit of the Americas,30.132778,-97.64111,Austin,SAD,stalna,5.513,20,suprotno smjeru kazaljke na satu,11,United States Grand Prix,53
+13,Circuit Zandvoort,52.38889,4.540833,Zandvoort,Nizozemska,stalna,4.259,14,u smjeru kazaljke na satu,12,Dutch Grand Prix,36
+14,Hungaroring,47.582222,19.25111,Mogyoród,Mađarska,stalna,4.381,14,u smjeru kazaljke na satu,13,Hungarian Grand Prix,40
+15,Jeddah Corniche Circuit,21.631945,39.104443,Jeddah,Saudijska Arabija,ulična,6.174,27,suprotno smjeru kazaljke na satu,14,Saudi Arabian Grand Prix,4
+16,Las Vegas Strip Circuit,36.10995,-115.16217,Paradise,SAD,ulična,6.201,17,suprotno smjeru kazaljke na satu,15,Las Vegas Grand Prix,1
+17,Lusail International Circuit,25.49,51.454166,Lusail,Katar,stalna,5.419,16,u smjeru kazaljke na satu,16,Qatar Grand Prix,2
+18,Marina Bay Street Circuit,1.291531,103.86385,Marina Bay,Singapur,ulična,4.94,19,suprotno smjeru kazaljke na satu,17,Singapore Grand Prix,23
+19,Miami International Autodrome,25.958055,-80.23889,Miami Gardens,SAD,ulična,5.412,18,suprotno smjeru kazaljke na satu,18,Miami Grand Prix,3
+20,Red Bull Ring,47.219723,14.764722,Spielberg,Austrija,stalna,4.318,10,u smjeru kazaljke na satu,25,Styrian Grand Prix,2
+20,Red Bull Ring,47.219723,14.764722,Spielberg,Austrija,stalna,4.318,10,u smjeru kazaljke na satu,19,Austrian Grand Prix,43
+21,Shanghai International Circuit,31.338888,121.21972,Shanghai,Kina,stalna,5.451,16,u smjeru kazaljke na satu,20,Chinese Grand Prix,17
+22,Silverstone Circuit,52.071,-1.016,Silverstone,Ujedinjeno Kraljevstvo,stalna,5.891,18,u smjeru kazaljke na satu,21,British Grand Prix,79
+22,Silverstone Circuit,52.071,-1.016,Silverstone,Ujedinjeno Kraljevstvo,stalna,5.891,18,u smjeru kazaljke na satu,24,70th Anniversary Grand Prix,1
+23,Suzuka International Racing Course,34.8417,136.5389,Suzuka,Japan,stalna,5.807,18,dvosmjerna,22,Japanese Grand Prix,49
+24,Yas Marina Circuit,24.467222,54.603058,Abu Dhabi,UAE,stalna,5.281,15,suprotno smjeru kazaljke na satu,23,Abu Dhabi Grand Prix,15
