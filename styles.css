@@ -1,0 +1,73 @@
+html
+{
+    font-family: sans-serif;
+}
+div:not(.button-container, .cell)
+{
+    width: 50%;
+    margin: auto;
+    padding: 10px;
+}
+p
+{
+    margin: 10px auto;
+}
+a:visited
+{
+    color: rgb(0, 0, 238);
+}
+form
+{
+    margin: 10px auto;
+}
+label
+{
+    display: block;
+    margin-bottom: 15px;
+}
+#search-input
+{
+    height: 2em;
+    width: 50%;
+    padding: 5px 10px;
+    display: block;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: black solid 1px;
+}
+#select
+{
+    height: 2.5em;
+    width: 25%;
+    padding: 5px;
+    margin-bottom: 20px;
+    display: block;
+    border-radius: 5px;
+}
+button
+{
+    height: 2em;
+}
+table
+{
+    margin: auto;
+    border-spacing: 0;
+    border-collapse: collapse;
+}
+th, td
+{
+    padding: 15px;
+    border: black solid 1px;
+}
+.last-column
+{
+    padding: 0;
+}
+.cell
+{
+    display: flex;
+}
+.count-col
+{
+    text-align: center;
+}

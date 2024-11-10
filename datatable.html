@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Formula 1 staze - tablica</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="frontend.js" defer></script>
+    </head>
+    <body>
+        <div class="big-container">
+            <form>
+                <label for="search-input">Polje za pretragu</label>
+                <input id="search-input" type="text" placeholder="Unesite vrijednost po kojoj će se pretraživati podaci" />
+                <select id="select" required>
+                    <option value="sve" selected disabled>Odaberite polje za pretragu</option>
+                    <option value="sve">Sva polja (wildcard)</option>
+                    <option value="staza_naziv">Naziv</option>
+                    <option value="geografska_sirina">Geografska širina</option>
+                    <option value="geografska_duzina">Geografska dužina</option>
+                    <option value="podrucje">Područje</option>
+                    <option value="drzava">Država</option>
+                    <option value="tip">Tip</option>
+                    <option value="duljina_km">Duljina</option>
+                    <option value="broj_zavoja">Broj zavoja</option>
+                    <option value="smjer">Smjer</option>
+                    <option value="vn_id">Naziv velike nagrade</option>
+                    <option value="broj_odrzavanja">Broj održavanja velike nagrade</option>
+                </select>
+                <div class="button-container">
+                    <button id="search-button" type="button">Pretraži</button>
+                    <a href="/download/f1_staze_filter.json">Preuzmi JSON</a>
+                    <a href="/download/f1_staze_filter.csv">Preuzmi CSV</a>
+                </div>
+            </form>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Naziv</th>
+                    <th>Geografska širina</th>
+                    <th>Geografska dužina</th>
+                    <th>Područje</th>
+                    <th>Država</th>
+                    <th>Tip</th>
+                    <th>Duljina</th>
+                    <th>Broj zavoja</th>
+                    <th>Smjer</th>
+                    <th class="name-col">Naziv velike nagrade</th>
+                    <th class="count-col">Broj održavanja velike nagrade</th>
+                </tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </body>
+</html>

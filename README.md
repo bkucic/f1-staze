@@ -19,7 +19,7 @@ staza_naziv - naziv staze
 geografska_sirina - geografska širina staze  
 geografska_duzina - geografska dužina staze  
 podrucje - naselje ili regije u kojoj se staza nalazi  
-drzava - drzava u kojoj se staza nalazi  
+drzava - država u kojoj se staza nalazi  
 tip - tip staze ovisno o uobičajenom načinu korištenja, može biti ulična ili stalna  
 duljina_km - duljina staze izražena u kilometrima  
 broj_zavoja - broj zavoja na stazi  

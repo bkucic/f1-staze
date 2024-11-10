@@ -1,0 +1,88 @@
+{
+    "$id": "https://example.com/f1-staze",
+    "$schema": "https://json-schema.org/draft/2020-12/schema",
+    "title": "Popis Staza",
+    "description": "Shema koja opisuje podatke o stazama i velikim nagradama.",
+    "type": "array",
+    "items": {
+      "type": "object",
+      "properties": {
+        "staza_id": {
+          "type": "integer",
+          "description": "Jedinstveni identifikator staze."
+        },
+        "staza_naziv": {
+          "type": "string",
+          "description": "Naziv staze."
+        },
+        "geografska_sirina": {
+          "type": "number",
+          "description": "Geografska širina lokacije staze."
+        },
+        "geografska_duzina": {
+          "type": "number",
+          "description": "Geografska dužina lokacije staze."
+        },
+        "podrucje": {
+          "type": "string",
+          "description": "Područje ili grad u kojem se staza nalazi."
+        },
+        "drzava": {
+          "type": "string",
+          "description": "Država u kojoj se staza nalazi."
+        },
+        "tip": {
+          "type": "string",
+          "description": "Vrsta staze (ulična ili stalna)."
+        },
+        "duljina_km": {
+          "type": "number",
+          "description": "Duljina staze u kilometrima."
+        },
+        "broj_zavoja": {
+          "type": "integer",
+          "description": "Ukupan broj zavoja na stazi."
+        },
+        "smjer": {
+          "type": "string",
+          "description": "Smjer vožnje na stazi (u smjeru kazaljke na satu ili suprotno)."
+        },
+        "velike_nagrade": {
+          "type": "array",
+          "description": "Popis velikih nagrada održanih na stazi.",
+          "items": {
+            "type": "object",
+            "properties": {
+              "vn_id": {
+                "type": "integer",
+                "description": "Jedinstveni identifikator velike nagrade."
+              },
+              "vn_naziv": {
+                "type": "string",
+                "description": "Naziv velike nagrade."
+              },
+              "broj_odrzavanja": {
+                "type": "integer",
+                "description": "Ukupan broj održavanja velike nagrade."
+              }
+            },
+            "required": ["vn_id", "vn_naziv", "broj_odrzavanja"]
+          }
+        }
+      },
+      "required": [
+        "staza_id",
+        "staza_naziv",
+        "geografska_sirina",
+        "geografska_duzina",
+        "podrucje",
+        "drzava",
+        "tip",
+        "duljina_km",
+        "broj_zavoja",
+        "smjer",
+        "velike_nagrade"
+      ]
+    }
+  }
+  
