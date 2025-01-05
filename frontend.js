@@ -3,11 +3,11 @@ const searchInput = document.getElementById("search-input");
 const select = document.getElementById("select");
 const tableBody = document.getElementById("table-body");
 
-fetch(`http://localhost:3000/?search=&attribute=sve`)
+fetch(`http://localhost:3000/filter?search=&attribute=sve`)
 .then(res => res.json())
 .then(data =>
 {
-    tableBody.innerHTML = data.map(staza => 
+    tableBody.innerHTML = data.response.map(staza => 
         `
             <tr>
                 <td>${staza.staza_naziv}</td>
@@ -41,11 +41,11 @@ searchButton.addEventListener("click", () =>
     const searchValue = searchInput.value;
     const attribute = select.value;
 
-    fetch(`http://localhost:3000/?search=${searchValue}&attribute=${attribute}`)
+    fetch(`http://localhost:3000/filter?search=${searchValue}&attribute=${attribute}`)
     .then(res => res.json())
     .then(data =>
     {
-        tableBody.innerHTML = data.map(staza => 
+        tableBody.innerHTML = data.response.map(staza => 
             `
                 <tr>
                     <td>${staza.staza_naziv}</td>

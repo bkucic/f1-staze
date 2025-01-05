@@ -1,0 +1,167 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "F1 staze API",
+    "version": "1.0",
+    "contact": {
+      "name": "Borna Kučić"
+    },
+    "license": {
+      "name": "The Unlicense",
+      "url": "https://unlicense.org/"
+    }
+  },
+  "paths": {
+    "/staze": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Uspješan zahtjev"
+          },
+          "400": {
+            "description": "Neuspješan zahtjev"
+          }
+        }
+      },
+      "post": {
+        "responses": {
+          "200": {
+            "description": "Uspješan zahtjev"
+          },
+          "400": {
+            "description": "Neuspješan zahtjev"
+          }
+        }
+      }
+    },
+    "/staze/{id}": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Uspješan zahtjev"
+          },
+          "400": {
+            "description": "Neuspješan zahtjev"
+          }
+        }
+      },
+      "put": {
+        "responses": {
+          "200": {
+            "description": "Uspješan zahtjev"
+          },
+          "400": {
+            "description": "Neuspješan zahtjev"
+          }
+        }
+      },
+      "delete": {
+        "responses": {
+          "200": {
+            "description": "Uspješan zahtjev"
+          },
+          "400": {
+            "description": "Neuspješan zahtjev"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer"
+          }
+        }
+      ]
+    },
+    "/staze/{id}/naziv": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Uspješan zahtjev"
+          },
+          "400": {
+            "description": "Neuspješan zahtjev"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer"
+          }
+        }
+      ]
+    },
+    "/staze/{id}/podrucje": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Uspješan zahtjev"
+          },
+          "400": {
+            "description": "Neuspješan zahtjev"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer"
+          }
+        }
+      ]
+    },
+    "/staze/{id}/drzava": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Uspješan zahtjev"
+          },
+          "400": {
+            "description": "Neuspješan zahtjev"
+          }
+        }
+      },
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "schema": {
+            "type": "integer"
+          }
+        }
+      ]
+    },
+    "/filter": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Uspješan zahtjev"
+          },
+          "400": {
+            "description": "Neuspješan zahtjev"
+          }
+        }
+      }
+    },
+    "/openapi": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Uspješan zahtjev"
+          }
+        }
+      }
+    }
+  }
+}

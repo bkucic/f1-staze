@@ -1,0 +1,53 @@
+GET http://localhost:3000/filter?search=&attribute=sve
+
+###
+GET http://localhost:3000/staze
+###
+GET http://localhost:3000/staze/1
+###
+GET http://localhost:3000/staze/1/naziv
+###
+GET http://localhost:3000/staze/1/podrucje
+###
+GET http://localhost:3000/staze/1/drzava
+###
+POST http://localhost:3000/staze
+Content-Type: application/json
+
+{
+    "staza_id": 25,
+    "staza_naziv": "testr",
+    "geografska_sirina": 23,
+    "geografska_duzina": 65,
+    "podrucje": "pod",
+    "drzava": "drv",
+    "tip": "ha",
+    "duljina_km": 5,
+    "broj_zavoja": 11,
+    "smjer": "clock"
+}
+###
+PUT http://localhost:3000/staze/0
+Content-Type: application/json
+
+{
+    //"staza_id": 25,
+    "staza_naziv": "testr",
+    "geografska_sirina": 23,
+    "geografska_duzina": 65,
+    "podrucje": "pod",
+    "drzava": "drv",
+    "tip": "ha",
+    "duljina_km": 5.265,
+    "broj_zavoja": 11,
+    "smjer": "clock"
+}
+###
+DELETE http://localhost:3000/staze/0
+###
+PATCH http://localhost:3000/staze
+###
+GET http://localhost:3000/openapi
+
+###
+GET http://localhost:3000/filter?search=&attribute=sve
