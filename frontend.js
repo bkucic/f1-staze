@@ -33,7 +33,6 @@ fetch(`http://localhost:3000/filter?search=&attribute=sve`)
             </tr>
         `
     ).join("");
-    console.log(data);
 });
 
 searchButton.addEventListener("click", () => 

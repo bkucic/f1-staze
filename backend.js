@@ -2,6 +2,18 @@ const express = require("express");
 const {Client} = require("pg");
 const path = require("path");
 const cors = require("cors");
+const { auth } = require('express-openid-connect');
+const { requiresAuth } = require('express-openid-connect');
+const fs = require("fs").promises;
+const json2csv = require("json2csv").parse;
+
+const config = {
+  authRequired: false,
+  secret: 'd4e6f6d4e4e5e2f3a1c4b2a1c3f7e5d4e3a1b4c7f9e1a3d6f4e5c2b3a7c4d2e1',
+  baseURL: 'http://localhost:3000',
+  clientID: 'qlmyzAYOzW6Hw1SeSKCl6apRRO5FLRDg',
+  issuerBaseURL: 'https://dev-yxospk0ycbzyt6pj.us.auth0.com'
+};
 
 const client = new Client({
     user: "postgres",
@@ -16,12 +28,62 @@ const app = express();
 
 app.use(cors());
 app.use(express.json());
+app.use(auth(config));
+app.set("view engine", "ejs");
+app.set("views", __dirname);
 
-app.get("/staze", async (req, res) => 
+app.get("/", (req, res) => 
+{
+    res.sendFile(req.oidc.isAuthenticated() ? "userIndex.html": "index.html", {root: __dirname});
+});
+
+app.use(express.static(__dirname));
+
+app.get('/profile', requiresAuth(), async (req, res) => 
+{
+    res.render("profile", {data: req.oidc.user});
+});
+
+function addSemantics(queryRes)
+{
+    queryRes.rows = queryRes.rows.map(entity =>
+    {
+        let newEntity = {};
+        for(const attribute in entity)
+        {
+            if(attribute === "geografska_sirina")
+            {
+                newEntity["koordinate"] = 
+                {
+                    "@context": "https://schema.org/",
+                    "@type": "geocoordinates",
+                    "latitude": entity["geografska_sirina"],
+                    "longitude": entity["geografska_duzina"]
+                };
+            }
+            newEntity[attribute] = entity[attribute];
+        }
+        delete newEntity["geografska_sirina"];
+        delete newEntity["geografska_duzina"];
+
+        newEntity["drzava"] =
+        {
+            "@context": "https://schema.org/",
+            "@type": "country",
+            "name": entity["drzava"]
+        };
+        
+        return newEntity;
+    });
+
+    return queryRes;
+}
+
+app.get("/update", requiresAuth(), async (req, res) =>
 {
     try
     {
-        const queryRes = await client.query(
+        let queryRes = await client.query(
             `
                 select
                     staza.*,
@@ -41,7 +103,76 @@ app.get("/staze", async (req, res) =>
             `
         );
 
-        res.type("json").status(200).send(
+        await fs.writeFile(path.join(__dirname, "f1_staze.json"), JSON.stringify(queryRes.rows, null, 4));
+
+        queryRes = await client.query(
+            `
+                copy
+                (
+                    select
+                        staza.*,
+                        velika_nagrada.*
+                    from
+                        staza
+                        join odrzana_na on staza.staza_id = odrzana_na.staza_id
+                        join velika_nagrada on odrzana_na.vn_id = velika_nagrada.vn_id
+                    order by
+                        staza.staza_id
+                ) to '${path.join(__dirname, "f1_staze.csv")}' with csv header;
+            `
+        );
+
+        res.redirect("/");
+    }
+    catch(err)
+    {
+        res.type("json").status(400).send(
+            {
+                "status": "Bad Request",
+                "message": "Zahtjev nije valjan",
+                "response": null
+            }
+        );
+    }
+});
+
+app.get("/download/json", (req, res) =>
+{
+    res.download(path.join(__dirname, "f1_staze.json"));
+});
+
+app.get("/download/csv", (req, res) =>
+{
+    res.download(path.join(__dirname, "f1_staze.csv"));
+});
+
+app.get("/staze", async (req, res) => 
+{
+    try
+    {
+        let queryRes = await client.query(
+            `
+                select
+                    staza.*,
+                    json_agg(json_build_object(
+                        'vn_id', velika_nagrada.vn_id,
+                        'vn_naziv', velika_nagrada.vn_naziv,
+                        'broj_odrzavanja', velika_nagrada.broj_odrzavanja
+                    )) velike_nagrade
+                from
+                    staza
+                    join odrzana_na on staza.staza_id = odrzana_na.staza_id
+                    join velika_nagrada on odrzana_na.vn_id = velika_nagrada.vn_id
+                group by
+                    staza.staza_id
+                order by
+                    staza.staza_id;
+            `
+        );
+        
+        queryRes = addSemantics(queryRes);
+
+        res.type("application/ld+json").status(200).send(
             {
                 "status": "OK",
                 "message": "Dohvaćene staze",
@@ -65,7 +196,7 @@ app.get("/staze/:id", async (req, res) =>
 {
     try
     {
-        const queryRes = await client.query(
+        let queryRes = await client.query(
             `
                 select
                     staza.*,
@@ -86,8 +217,10 @@ app.get("/staze/:id", async (req, res) =>
                     staza.staza_id;
             `
         );
+        
+        queryRes = addSemantics(queryRes);
 
-        res.type("json").status(200).send(
+        res.type("application/ld+json").status(200).send(
             {
                 "status": "OK",
                 "message": `Dohvaćena staza ${req.params.id}`,
@@ -111,7 +244,7 @@ app.get("/staze/:id/naziv", async (req, res) =>
 {
     try
     {
-        const queryRes = await client.query(
+        let queryRes = await client.query(
             `
                 select
                     staza.*,
@@ -132,8 +265,10 @@ app.get("/staze/:id/naziv", async (req, res) =>
                     staza.staza_id;
             `
         );
+        
+        queryRes = addSemantics(queryRes);
 
-        res.type("json").status(200).send(
+        res.type("application/ld+json").status(200).send(
             {
                 "status": "OK",
                 "message": `Dohvaćen naziv staze ${req.params.id}`,
@@ -157,7 +292,7 @@ app.get("/staze/:id/podrucje", async (req, res) =>
 {
     try
     {
-        const queryRes = await client.query(
+        let queryRes = await client.query(
             `
                 select
                     staza.*,
@@ -178,8 +313,10 @@ app.get("/staze/:id/podrucje", async (req, res) =>
                     staza.staza_id;
             `
         );
+        
+        queryRes = addSemantics(queryRes);
 
-        res.type("json").status(200).send(
+        res.type("application/ld+json").status(200).send(
             {
                 "status": "OK",
                 "message": `Dohvaćeno područje staze ${req.params.id}`,
@@ -203,7 +340,7 @@ app.get("/staze/:id/drzava", async (req, res) =>
 {
     try
     {
-        const queryRes = await client.query(
+        let queryRes = await client.query(
             `
                 select
                     staza.*,
@@ -224,8 +361,10 @@ app.get("/staze/:id/drzava", async (req, res) =>
                     staza.staza_id;
             `
         );
+        
+        queryRes = addSemantics(queryRes);
 
-        res.type("json").status(200).send(
+        res.type("application/ld+json").status(200).send(
             {
                 "status": "OK",
                 "message": `Dohvaćena država staze ${req.params.id}`,
@@ -249,7 +388,7 @@ app.post("/staze", async (req, res) =>
 {
     try
     {
-        const queryRes = await client.query(
+        let queryRes = await client.query(
             `
                 insert into
                     staza
@@ -300,7 +439,7 @@ app.put("/staze/:id", async (req, res) =>
             string += `${column} = ${req.body[column] === parseFloat(req.body[column]) ? req.body[column]: `'${req.body[column]}'`}, `;
         }
 
-        const queryRes = await client.query(
+        let queryRes = await client.query(
             `
                 update
                     staza
@@ -335,7 +474,7 @@ app.delete("/staze/:id", async (req, res) =>
 {
     try
     {
-        const queryRes = await client.query(
+        let queryRes = await client.query(
             `
                 delete from
                     staza
@@ -371,7 +510,7 @@ app.get("/filter", async (req, res) =>
         const search = req.query.search;
         const attribute = req.query.attribute;
         
-        const queryRes = await client.query(
+        let queryRes = await client.query(
             `
                 select
                     staza.*,

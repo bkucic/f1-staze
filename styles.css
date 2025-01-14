@@ -2,11 +2,30 @@ html
 {
     font-family: sans-serif;
 }
-div:not(.button-container, .cell)
+div:not(.button-container, .cell, .header-container, .user-actions, .user-data)
 {
     width: 50%;
     margin: auto;
     padding: 10px;
+}
+div .header-container
+{
+    display: flex;
+    justify-content: space-between;
+}
+.user-actions
+{
+    display: flex;
+    align-items: flex-end;
+}
+.user-actions a
+{
+    margin-left: 10px;
+}
+.user
+{
+    display: flex;
+    justify-content: space-evenly;
 }
 p
 {
